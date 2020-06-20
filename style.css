@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+:root{
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-dark-blue: hsl(234, 12%, 34%);   
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+body {
+    background-color: var(--very-light-gray);
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.heading_first {
+    color: var(--grayish-blue);
+    font-weight:200; 
+    margin: 0;
+}
+
+.heading_second {
+    color: var(--very-dark-blue);
+    font-weight: 600;
+    margin: 0;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+header p {
+    color: var(--grayish-blue);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    max-width: 1140px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.box {
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 15px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    width: 350px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.box::after {
+    content: '';
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+.red-box::after {
+    background-color: var(--red);
+}
+
+.cyan-box::after {
+    background-color: var(--cyan);
+}
+
+.orange-box::after {
+    background-color: var(--orange);
+}
+
+.blue-box::after {
+    background-color: var(--blue);
+}
+
+.box-push {
+    transform: translateY(50%);
+}
+
+.box img {
+    display: block;
+    margin-left: auto;
+}
+
+.box p {
+    font-size: 15px;
+    margin: 15px 0 30px;
+    color: var(--grayish-blue);
+}
+
+
+footer {
+    text-align: center;
+}
+
+@media(max-width: 375px)
+{
+    .box-push {
+        transform: translateY(0);
+    }
+
+    header {
+        max-width: 90%;
+    }
+
+    .heading_first {
+        font-size: 23px;
+    }
+
+    .heading_second {
+        font-size: 24px;
+    }
+
+    header p {
+        font-size: 13px;
+    }
+
+    .box p {
+        font-size: 12px; 
+    }
+}
